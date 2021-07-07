@@ -1,4 +1,4 @@
-# Horiseon - Refactoring
+# Password Generator - Adding Javascript Logic
 
 ## Description
 
