@@ -5,14 +5,22 @@ var generatePassword = function(){
   var numbers = [0,1,2,3,4,5,6,7,8,9];
   var upperCase = ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'];
   var lowerCase = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
-  var specialSymbols = ['!','@','#','$','%','^','&','*','(',')'];
+  var specialSymbols = ['!','@','#','$','%','^','&','*','(',')'];//add more symbols
 
   var concatenatedArray = [];
 
   //create questions//asking lenght
   var lengthQuestion = window.prompt("How many characters do you want your password to have?");
-  while((isNaN(lengthQuestion)) || lengthQuestion<8 || lengthQuestion>128){//you can add while loops for each condition inside this while loop so to have different messages for each.
-  window.alert("Your input must contain only numbers and must be no less than 8 characters long or 128 characters long");
+  while((isNaN(lengthQuestion)) || lengthQuestion<8 || lengthQuestion>128){
+    if(isNaN(lengthQuestion)){
+      window.alert("Your input contained invalid characters. You must type your answer using numbers only.");
+    }
+    else if(lengthQuestion<8){
+      window.alert("The number you chose is too small. Please choose a number no less than 8 and no more than 128 for the length of your password.");
+    }
+    else{
+      window.alert("The number you chose is too big. Please choose a number no less than 8 and no more than 128 for the length of your password.");
+    }
     lengthQuestion = window.prompt("How many characters do you want your password to have?");
   }//now we know how long finalPassword will be.
   
