@@ -11,6 +11,10 @@ var generatePassword = function(){
 
   //create questions
   var lengthQuestion = window.prompt("How many characters do you want your password to have?");
+  while((isNaN(lengthQuestion)) || lengthQuestion<8 || lengthQuestion>128){//you can add while loops for each condition inside this while loop so to have different messages for each.
+    window.alert("Your input must contain only numbers and must be no less than 8 characters long or 128 characters long");
+    lengthQuestion = window.prompt("How many characters do you want your password to have?");
+  }//now we know how long finalPassword will be.
 
   var upCaseQuestion = window.confirm("Would you like your password to include Upper Case Letters?");
 
