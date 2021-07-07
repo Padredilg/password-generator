@@ -17,6 +17,9 @@ var generatePassword = function(){
   }//now we know how long finalPassword will be.
 
   var upCaseQuestion = window.confirm("Would you like your password to include Upper Case Letters?");
+  if(upCaseQuestion){
+    concatenatedArray = concatenatedArray.concat(upperCase);
+  }
 
   var lowCaseQuestion = window.confirm("Would you like your password to include Lower Case Letters?");
 
