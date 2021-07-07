@@ -6,6 +6,19 @@ var generatePassword = function(){
   var upperCase = ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'];
   var lowerCase = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
   var specialSymbols = ['!','@','#','$','%','^','&','*','(',')'];
+
+  var concatenatedArray = [];
+
+  //create questions
+  var lengthQuestion = window.prompt("How many characters do you want your password to have?");
+
+  var upCaseQuestion = window.confirm("Would you like your password to include Upper Case Letters?");
+
+  var lowCaseQuestion = window.confirm("Would you like your password to include Lower Case Letters?");
+
+  var numericQuestion = window.confirm("Would you like your password to include Numbers?");
+
+  var specialSymbolQuestion = window.confirm("Would you like your password to include special symbols?");
 }
 
 // Get references to the #generate element
