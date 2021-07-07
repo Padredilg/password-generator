@@ -1,5 +1,8 @@
 // Assignment code here
 
+var generatePassword = function(){
+  //create arrays and prompts to sort the final Password
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
