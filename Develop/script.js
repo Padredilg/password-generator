@@ -6,11 +6,11 @@ var generatePassword = function(){
   var upperCase = ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'];
   var lowerCase = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
   var specialSymbols = ['!','@','#','$','%','^','&','*','(',')', '*', '+', '-', ',', '/', '.', ':', ';', '?', '_', '~'];
-  
+
   var concatenatedArray = [];
 
   //create questions//asking lenght
-  var lengthQuestion = window.prompt("How many characters do you want your password to have?");
+  var lengthQuestion = window.prompt("How many characters do you want your password to contain?");
   while((isNaN(lengthQuestion)) || lengthQuestion<8 || lengthQuestion>128){
     if(isNaN(lengthQuestion)){
       window.alert("Your input contained invalid characters. You must type your answer using numbers only.");
@@ -21,7 +21,7 @@ var generatePassword = function(){
     else{
       window.alert("The number you chose is too big. Please choose a number no less than 8 and no more than 128 for the length of your password.");
     }
-    lengthQuestion = window.prompt("How many characters do you want your password to have?");
+    lengthQuestion = window.prompt("How many characters do you want your password to contain?");
   }//now we know how long finalPassword will be.
   
   //asking for upper case
@@ -42,7 +42,7 @@ var generatePassword = function(){
     concatenatedArray = concatenatedArray.concat(numbers);
   }
   
-  var specialSymbolQuestion = window.confirm("Would you like your password to include special symbols?");
+  var specialSymbolQuestion = window.confirm("Would you like your password to include Special Symbols?");
   if(specialSymbolQuestion){
     concatenatedArray = concatenatedArray.concat(specialSymbols);
   }
