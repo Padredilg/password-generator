@@ -1,18 +1,26 @@
-# Password Generator - Adding Javascript Logic
+# Luiz Guilherme Padredi
 
-## Description
+# Password Generator - Adding Javascript Logic :pencil:
 
-The purpose of this activity was to enable the button to generate a password for the user according to user's preferences .
+## :label: Description
+Challenge #3 - UCF's Coding Bootcamp.</br>
+In this challenge I had to write a code for a button to generate a password according to the user's preferences .
 
-## Website
+## :scroll: Instructions
+To generate a password, click the 'Generate Password' button and set your preferences through the pop-ups by clicking OK for yes, and CANCEL for no.
 
+## 	:hash: Coding Languages Used
+:heavy_check_mark: HTML</br>
+:heavy_check_mark: CSS</br>
+:heavy_check_mark: JavaScript</br></br>
+jQuery and Bootstrap were not used.
+
+## :desktop_computer: Website
+Link to Website: https://padredilg.github.io/passwordGenerator/
+</br></br>
+Screenshot from Website:
 ![screenshot of website](./images/passwordGenerator.png)
 
-## Code
+## :clap: Credits
 
-The code already included all of the HTML and CSS needed for the webpage, so only the Javascript part was added.
-
-## Credits
-
-This code was worked upon by Xander Rapstine and Luiz Padredi.\n
-It was originally written by Xander Rapstine, and Luiz Padredi added the JS logic for the button.
+:hammer_and_wrench: Created by Luiz Guilherme Padredi
