@@ -5,13 +5,16 @@ var generatePassword = function(){
   var numbers = [0,1,2,3,4,5,6,7,8,9];
   var upperCase = ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'];
   var lowerCase = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
-  var specialSymbols = ['!','@','#','$','%','^','&','*','(',')', '*', '+', '-', ',', '/', '.', ':', ';', '?', '_', '~'];
+  var specialSymbols = ['!','@','#','$','%','^','&','*','(',')','*','+','-',',','/','.',':',';','?','_','~'];
 
   var concatenatedArray = [];
 
   //create questions//asking lenght
   var lengthQuestion = window.prompt("How many characters do you want your password to contain?");
   while((isNaN(lengthQuestion)) || lengthQuestion<8 || lengthQuestion>128){
+    if(lengthQuestion === null){
+      return false;
+    }
     if(isNaN(lengthQuestion)){
       window.alert("Your input contained invalid characters. You must type your answer using numbers only.");
     }
@@ -47,6 +50,12 @@ var generatePassword = function(){
     concatenatedArray = concatenatedArray.concat(specialSymbols);
   }
 
+  //if no chars picked, Alert person and return false
+  if(!upCaseQuestion && !lowCaseQuestion && !numericQuestion && !specialSymbolQuestion){
+    alert("You did not select any type of character for your password.");
+    return false;
+  }
+
   var finalPassword = "";
 
   for(var i=0; i<lengthQuestion; i++){
@@ -62,6 +71,11 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+
+  if(!password){
+    return false;
+  }
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
