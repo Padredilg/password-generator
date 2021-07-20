@@ -3,8 +3,7 @@
 # Password Generator - Adding Javascript Logic :pencil:
 
 ## :label: Description
-Challenge #3 - UCF's Coding Bootcamp.</br>
-In this challenge I had to write a code for a button to generate a password according to the user's preferences .
+This program generates a password according to the user's preferences .
 
 ## :scroll: Instructions
 To generate a password, click the 'Generate Password' button and set your preferences through the pop-ups by clicking OK for yes, and CANCEL for no.
