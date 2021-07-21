@@ -15,7 +15,7 @@ To generate a password, click the 'Generate Password' button and set your prefer
 jQuery and Bootstrap were not used.
 
 ## :desktop_computer: Website
-Link to Website: https://padredilg.github.io/passwordGenerator/
+Link to Website: https://padredilg.github.io/password-generator/
 </br></br>
 Screenshot from Website:
 ![screenshot of website](./images/passwordGenerator.png)
