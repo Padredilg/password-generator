@@ -18,7 +18,7 @@ jQuery and Bootstrap were not used.
 Link to Website: https://padredilg.github.io/password-generator/
 </br></br>
 Screenshot from Website:
-![screenshot of website](./images/passwordGenerator.png)
+![screenshot of website](./images/password-generator.png)
 
 ## :clap: Credits
 

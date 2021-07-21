@@ -9,8 +9,9 @@ var generatePassword = function(){
 
   var concatenatedArray = [];
 
-  //create questions//asking lenght
-  var lengthQuestion = window.prompt("How many characters do you want your password to contain?");
+  /*Questions*/
+  //asking for lenght
+  var lengthQuestion = window.prompt("Choose a length for your password. (Between 8 and 128)");
   while((isNaN(lengthQuestion)) || lengthQuestion<8 || lengthQuestion>128){
     if(lengthQuestion === null){
       return false;
@@ -19,40 +20,44 @@ var generatePassword = function(){
       window.alert("Your input contained invalid characters. You must type your answer using numbers only.");
     }
     else if(lengthQuestion<8){
-      window.alert("The number you chose is too small. Please choose a number no less than 8 and no more than 128 for the length of your password.");
+      window.alert("The number you chose is too small.");
     }
     else{
-      window.alert("The number you chose is too big. Please choose a number no less than 8 and no more than 128 for the length of your password.");
+      window.alert("The number you chose is too big.");
     }
-    lengthQuestion = window.prompt("How many characters do you want your password to contain?");
+    lengthQuestion = window.prompt("Please choose a number no less than 8 and no more than 128 for the length of your password.");
   }//now we know how long finalPassword will be.
   
   //asking for upper case
-  var upCaseQuestion = window.confirm("Would you like your password to include Upper Case Letters?");
+  var upCaseQuestion = window.confirm("Upper Case Letters? (A, B, C, ...)");
   if(upCaseQuestion){
     concatenatedArray = concatenatedArray.concat(upperCase);
   }
   
   //asking for lower case
-  var lowCaseQuestion = window.confirm("Would you like your password to include Lower Case Letters?");
+  var lowCaseQuestion = window.confirm("Lower Case Letters? (a, b, c, ...)");
   if(lowCaseQuestion){
     concatenatedArray = concatenatedArray.concat(lowerCase);
   }
   
   //asking for numbers
-  var numericQuestion = window.confirm("Would you like your password to include Numbers?");
+  var numericQuestion = window.confirm("Numbers? (1, 2, 3, ...)");
   if(numericQuestion){
     concatenatedArray = concatenatedArray.concat(numbers);
   }
   
-  var specialSymbolQuestion = window.confirm("Would you like your password to include Special Symbols?");
+  //asking for special symbols
+  var specialSymbolQuestion = window.confirm("Special Symbols? (!, @, #, ...)");
   if(specialSymbolQuestion){
     concatenatedArray = concatenatedArray.concat(specialSymbols);
   }
 
-  //if no chars picked, Alert person and return false
+  //if no chars picked --> Try Again or Stop
   if(!upCaseQuestion && !lowCaseQuestion && !numericQuestion && !specialSymbolQuestion){
-    alert("You did not select any type of character for your password.");
+    var tryAgain = confirm("You did not select any type of character for your password. Try Again?");
+    if(tryAgain){
+      generatePassword();
+    }
     return false;
   }
 
